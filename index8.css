@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  background: linear-gradient(
+      to right top,
+      rgba(11, 12, 12, 0.932),
+      rgba(15, 15, 15, 0.726)
+    ),
+    url(./img/pexels-pixabay-461428.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* overflow: none; */
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+/* THE HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* flex-flow: row wrap; */
+  grid-column: 1 / span 3;
+
+  /* margin-top: 20px; */
+  height: 100px;
+  padding: 0 20px;
+  /* margin-left: auto; */
+}
+
+/*  SOME KIND OF LOG */
+
+.hero {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(42, 39, 39, 0.687);
+  border-radius: 10px;
+  flex-basis: 20px;
+}
+/* LOG HEADER */
+.hero > h1 {
+  margin-left: 10px;
+  /* cursor: pointer; */
+}
+
+.hero > h1 > a {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 3.5434rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(231, 233, 233, 0.918);
+  /* background-color: tomato; */
+  margin: 0;
+  padding: 0;
+}
+/* HEADER IMAGE */
+.hero img {
+  cursor: pointer;
+}
+
+/* NAVIGATION INSIDE THE HEADER */
+
+nav {
+  background-color: rgba(29, 38, 39, 0.822);
+  position: relative;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+  top: 10px;
+}
+
+nav ul {
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  flex-flow: wrap row;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(248, 248, 248, 0.911);
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+}
+nav ul li {
+  margin-left: 10px;
+  min-width: 140px;
+  /* background-color: rgba(29, 38, 39, 0.822); */
+}
+
+nav a:hover {
+  color: rgba(8, 8, 8, 0.966);
+  background-color: snow;
+}
+
+nav ul ul {
+  display: none;
+  background-color: rgba(27, 27, 27, 0.822);
+}
+
+nav ul ul li {
+  margin: 0 auto;
+  border-bottom: 1px solid snow;
+}
+
+nav ul ul li:last-child {
+  border: none;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+/* ARTICLE */
+article {
+  margin-top: 60px;
+  border-top: 2px solid snow;
+  border-bottom: 2px solid snow;
+  grid-column: 1 / span 3;
+}
+article p {
+  font-family: monospace;
+  color: snow;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+  padding-top: 10px;
+  word-spacing: 20px;
+  line-height: 2.3;
+}
+/*  ASIDE */
+aside {
+  grid-column: 1 / span 3;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1.5;
+}
+
+form label {
+  font-weight: 900;
+  font-size: 24px;
+  font-family: monospace;
+  color: snow;
+}
+
+form input {
+  border: 2px solid rgba(231, 233, 233, 0.918);
+  border-radius: 5px;
+  padding: 2px 5px;
+  /* width: 140px; */
+  /* line-height: .; */
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  cursor: pointer;
+  padding: 2px 3px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9334rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  background-color: rgba(30, 30, 30, 0.789);
+  color: rgba(221, 221, 221, 0.911);
+  /* line-height: 1.5; */
+}
+
+form button:hover {
+  transform: scale(1.2);
+}
+/*  SECTION */
+section {
+  grid-column: 1 / span 3;
+  margin: 20px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.food {
+  flex-basis: 260px;
+  color: rgba(255, 255, 255, 0.911);
+  font-family: monospace;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.food h2 {
+  font-size: 29px;
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.food p {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 900;
+  color: rgba(243, 243, 243, 0.979);
+  word-spacing: 10px;
+  margin-top: 10px;
+}
+
+.food img {
+  border-radius: 10px;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.938),
+    -1px -4px 5px rgba(11, 12, 12, 0.932);
+}
+
+/* FOOTER */
+
+footer {
+  grid-column: 1 / span 3;
+  padding: 10px;
+  text-align: center;
+  border-top: rgba(75, 74, 76, 0.809) 4px solid;
+}
+
+footer > p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: rgba(224, 224, 224, 0.932);
+}
+
+footer div a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(231, 233, 233, 0.918);
+}
+
+@media screen and (max-width: 1020px) {
+  header {
+    justify-content: space-between;
+  }
+  nav {
+    position: fixed;
+    background: linear-gradient(
+      to right top,
+      rgba(11, 12, 12, 0.932),
+      rgba(15, 15, 15, 0.726)
+    );
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    right: 100%;
+    top: 0;
+    transition: all 0.4s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: crimson; */
+    height: 100%;
+    margin-top: 40px;
+    /* overflow: none; */
+  }
+
+  nav ul li {
+    margin-top: -120px;
+  }
+
+  nav ul li ul {
+    /* position: relative; */
+    background-color: transparent;
+    z-index: 3;
+    display: none !important;
+  }
+
+  .menubar {
+    position: fixed;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background: rgba(11, 12, 12, 0.932) url("./img/menu.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .menubar.close {
+    position: fixed;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background: rgba(11, 12, 12, 0.932) url("./img/close.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  nav.active {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  article {
+    padding: 15px;
+  }
+  article p {
+    font-size: 25px;
+  }
+
+  .form-group {
+    justify-content: center;
+    /* background-color: blue; */
+    /* width: 420px; */
+  }
+  .form-group label {
+    font-size: 20px;
+  }
+}
+
+.success {
+  border-color: rgba(22, 177, 100, 0.925);
+}
+
+.error {
+  border-color: rgba(163, 62, 44, 0.89);
+}
