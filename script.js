@@ -3,6 +3,7 @@
 const toggleMenu = document.querySelector(".menubar");
 const nav = document.querySelector("nav");
 
+window.addEventListener("DOMContentLoaded",function(){
 toggleMenu.addEventListener("click", () => {
   // nav.classList.add()
   console.log("holo");
@@ -42,4 +43,4 @@ myForm.addEventListener("submit", function (e) {
 function isEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
-}
+}});
